@@ -1,0 +1,20 @@
+{
+  "method": "next_step_displacement_accumulation",
+  "attitude_source": "recorded_csv_body_to_world_quaternion",
+  "uses_gt_position_during_warmup": true,
+  "uses_gt_position_after_warmup": false,
+  "window_size": 101,
+  "window_time_s": 1.0,
+  "warmup_point_count": 101,
+  "network_output_frequency_hz": 100,
+  "network_output_stride_samples": 1,
+  "segment_count": 1238,
+  "trajectory_point_count": 1339,
+  "position_rmse_m": 1.1504323113487835,
+  "position_final_error_m": 1.5043193876615577,
+  "axis_rmse_m": {
+    "x": 0.5785091532026068,
+    "y": 0.9143117546787832,
+    "z": 0.3909676174727418
+  }
+}

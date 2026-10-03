@@ -8,7 +8,11 @@
 
 Thank you for your interest in our work on **LepidIO**, a learning-based phase-informed inertial odometry framework tailored for flapping-wing robots.
 
-**This repository is currently being prepared for public release.** We are committed to making our code, models, and data available to the community. The release is planned **upon acceptance of the paper currently under review**. We kindly ask reviewers and visitors to check back soon. 
+## Version History
+
+| Version | Updates |
+| :------ | :------ |
+| **v0.0.1** | Initial public release of the paper-aligned core pipeline, including the fixed network architecture, training and trajectory inference scripts, configuration, and pretrained model. |
 
 ------
 
@@ -26,19 +30,23 @@ We evaluate LepidIO on **26 real-flight sequences** collected using a butterfly-
 
 ------
 
-## 🚀 Planned Release Contents
+## Training and Inference
 
-Upon paper acceptance, we will release the following:
+Train the model using the default configuration:
 
-| Resource                        | Description                                           |
-| :------------------------------ | :---------------------------------------------------- |
-| **Network Architecture Config** | Configuration file for the TCN-GRU model              |
-| **Pretrained Network Weights**  | Trained model weights for reproducing paper results   |
-| **Dataset**                     | Real-flight sequences with UWB reference trajectories |
-| **Reproduction Scripts**        | Scripts to reproduce evaluation results               |
+```bash
+python src/learning/main_net.py train \
+  --config configs/lepid_io.json \
+  --device cuda:0
+```
 
-------
+Run network-only trajectory inference:
 
-## ⭐ Stay Updated
-
-Watch this repository to be notified when the code is released. We look forward to sharing our work with the community!
+```bash
+python tools/network_only_trajectory.py \
+  --config configs/lepid_io.json \
+  --checkpoint results/lepidio_c5/ckpt/best_model.pt \
+  --csv datasets/Dataset_clean_raw_attitude/20260903_171951.csv \
+  --out-dir results/lepidio_c5/20260903_171951 \
+  --device cuda:0
+```

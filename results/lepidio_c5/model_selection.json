@@ -1,0 +1,34 @@
+{
+  "selection_policy": "equal-sequence world-XY validation trajectory ATE RMSE with 2% tie band; tie-break by worst XY ATE, XY RTE-5s, XY RTE-1s, then earlier epoch",
+  "default_model": "ckpt/best_model.pt",
+  "default_model_alias_of": "ckpt/best_xy_model.pt",
+  "best_step_model": "ckpt/best_step_model.pt",
+  "best_step_epoch": 5,
+  "best_macro_val_rmse": 0.016849763984030076,
+  "best_trajectory_model": "ckpt/best_trajectory_model.pt",
+  "best_trajectory_epoch": 5,
+  "best_trajectory_ate_rmse": 1.0302064524038246,
+  "best_trajectory_worst_ate_rmse": 1.314752044264374,
+  "best_trajectory_macro_final_drift_percent": 3.3084291443915683,
+  "best_xy_model": "ckpt/best_xy_model.pt",
+  "best_xy_epoch": 5,
+  "best_xy_ate_rmse": 0.8816637281052693,
+  "best_xy_worst_ate_rmse": 1.2104859341416099,
+  "best_xy_rte_1s": 0.5941069579274183,
+  "best_xy_rte_5s": 0.885044363214541,
+  "best_xy_macro_final_drift_percent": 2.6115432767476228,
+  "trajectory_tie_tolerance_percent": 2.0,
+  "trajectory_tie_breakers": [
+    "worst_sequence_xy_ate_rmse",
+    "macro_xy_rte_5s",
+    "macro_xy_rte_1s",
+    "earlier_epoch"
+  ],
+  "validation_sequences": [
+    "20260903_132452",
+    "20260903_151102",
+    "20260903_165919",
+    "20260903_180615"
+  ],
+  "sequence_weighting": "equal macro average"
+}

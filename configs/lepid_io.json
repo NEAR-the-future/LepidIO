@@ -1,0 +1,55 @@
+{
+  "data": {
+    "_comment": "Data settings",
+    "root_dir": "",
+    "dataset": "",
+    "csv_dir": "",
+    "train_sequences": [
+
+    ],
+    "val_sequences": [
+
+    ],
+    "test_sequences": [
+
+    ],
+    "window_time": 1.0,
+    "stride": 1,
+    "imu_freq_net": 100,
+    "batch_size": 32,
+    "num_workers": 4,
+    "prefetch_factor": 2
+  },
+  "model": {
+    "_comment": "Fixed paper C5 model",
+    "dropout": 0.1,
+    "gru_dropout": 0.1
+  },
+  "train": {
+    "_comment": "Training settings",
+    "device": "auto",
+    "lr": 0.0001,
+    "max_epochs": 50,
+    "weight_decay": 0.01,
+    "min_lr": 1e-06,
+    "loss": "Huber",
+    "eval_freq": 1,
+    "save_freq": 10,
+    "seed": 42
+  },
+  "inference": {
+    "_comment": "Inference settings",
+    "device": "auto",
+    "batch_size": 1,
+    "network_output_freq": 100,
+    "network_trajectory_batch_size": 256,
+    "model_path": "results/lepidio_c5/ckpt/best_model.pt"
+  },
+  "paths": {
+    "_comment": "Output paths",
+    "exp_name": "lepidio_c5",
+    "exp_dir": "results/lepidio_c5",
+    "ckpt_dir": "results/lepidio_c5/ckpt",
+    "log_dir": "results/lepidio_c5/logs"
+  }
+}

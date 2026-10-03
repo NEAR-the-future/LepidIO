@@ -1,0 +1,17 @@
+{
+  "sampling_freq": 100,
+  "window_time": 1.0,
+  "window_size": 101,
+  "window_convention": "inclusive_endpoints",
+  "quaternion_order": "xyzw",
+  "feature_schema": "imu6_actual_wing_displacement2_actual_phase2_v1",
+  "model_architecture": "full_multimodal_fusion_tcn_gru_displacement_v2",
+  "target_schema": "next_step_body_delta_position_v1",
+  "input_modalities": [
+    "imu",
+    "measured_flapping_angle",
+    "commanded_phase"
+  ],
+  "phase_encoding": "sin_cos",
+  "fusion_encoder": true
+}

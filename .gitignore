@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+
+# Numba cache
+*.nbc
+*.nbi
+*.nbi
+
+
+# data
+datasets/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE 
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# env
+.env
+.env.local
+venv/
+.venv/
+env/
+
+# log
+logs/
+*.log
+
+# system files
+.DS_Store
+Thumbs.db
+
+# local
+figures/
